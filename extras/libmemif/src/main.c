@@ -508,10 +508,10 @@ memif_init (memif_control_fd_update_t * on_control_fd_update, char *app_name,
       DBG ("libmemif event polling initialized");
     }
 
-  lm->control_list_len = 2;
-  lm->interrupt_list_len = 2;
-  lm->listener_list_len = 1;
-  lm->pending_list_len = 1;
+  lm->control_list_len = 200;
+  lm->interrupt_list_len = 200;
+  lm->listener_list_len = 100;
+  lm->pending_list_len = 100;
 
   lm->control_list =
     lm->alloc (sizeof (memif_list_elt_t) * lm->control_list_len);
