@@ -205,8 +205,8 @@ vnet_bind_inline (vnet_bind_args_t * a)
   a->sep_ext.app_wrk_index = app_wrk->wrk_index;
 
   session_endpoint_update_for_app (&a->sep_ext, app, 0 /* is_connect */ );
-  if (!session_endpoint_in_ns (&a->sep))
-    return VNET_API_ERROR_INVALID_VALUE_2;
+  //if (!session_endpoint_in_ns (&a->sep))
+  //  return VNET_API_ERROR_INVALID_VALUE_2;
 
   /*
    * Add session endpoint to local session table. Only binds to "inaddr_any"
