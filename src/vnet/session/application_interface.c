@@ -293,6 +293,9 @@ application_connect (vnet_connect_args_t * a)
   u8 fib_proto;
   u64 lh;
 
+  /*
+   * XXX: This looks to me somewhat inconsistent way of validation
+   */
   if (session_endpoint_is_zero (&a->sep))
     return VNET_API_ERROR_INVALID_VALUE;
 
